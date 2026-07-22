@@ -1,0 +1,31 @@
+id_cliente,nome,email,cpf,telefone,genero,data_nascimento,data_cadastro,status_conta
+1,Maria Julia Mendes,cliente1@yahoo.com.br,000.000.001-01,+55 35 2300-8578,F,2000-12-05,2022-04-26 12:00:44,ATIVO
+2,Bruna Freitas,cliente2@uol.com.br,000.000.002-02,+55 63 4256-6009,F,1978-04-30,2020-03-18 14:37:43,ATIVO
+3,Srta. Lívia Mendonça,cliente3@icloud.com,000.000.003-03,+55 86 6903-0341,F,1998-01-12,2021-03-12 08:58:29,ATIVO
+4,Nathan Fernandes,cliente4@uol.com.br,000.000.004-04,+55 54 9856-8499,M,2010-05-29,2019-06-11 04:18:46,ATIVO
+5,Pedro Lucas Alves,cliente5@live.com,000.000.005-05,+55 24 6007-4614,M,1995-08-27,2025-05-25 19:09:23,INATIVO
+6,Pedro Miguel Andrade,cliente6@gmail.com,000.000.006-06,15 9174-4368,OUTRO,1971-03-11,2021-01-04 18:03:20,ATIVO
+7,Maria Helena da Costa,cliente7@icloud.com,000.000.007-07,82 6215-7740,OUTRO,1992-04-14,2025-05-26 14:15:47,INATIVO
+8,Maria Fernanda Montenegro,cliente8@outlook.com.br,000.000.008-08,69 1824-8741,F,1959-09-26,2019-12-24 13:05:20,ATIVO
+9,Thiago Fonseca,cliente9@uol.com.br,000.000.009-09,+55 33 4198-8726,M,1955-01-22,2021-09-16 00:53:08,ATIVO
+10,Erick Barros,cliente10@yahoo.com.br,000.000.010-10,+55 61 3399-8215,OUTRO,1979-12-22,2022-06-18 17:49:16,ATIVO
+11,Alice Martins,cliente11@hotmail.com,000.000.011-11,+55 86 2044-8456,F,1972-04-15,2019-03-31 19:25:13,ATIVO
+12,Ana Sophia Fonseca,cliente12@bol.com.br,000.000.012-12,+55 48 7660-4568,OUTRO,1981-10-15,2020-12-27 04:57:04,ATIVO
+13,Antonella Brito,cliente13@outlook.com.br,000.000.013-13,27 5767-7657,F,1990-12-03,2023-09-18 10:50:45,INATIVO
+14,Maria Liz da Cunha,cliente14@live.com,000.000.014-14,55 0852-0852,OUTRO,1981-07-31,2019-11-12 09:05:27,ATIVO
+15,Lucas Duarte,cliente15@yahoo.com.br,000.000.015-15,+55 35 7504-9988,OUTRO,1975-03-18,2024-07-17 07:09:25,ATIVO
+16,Sarah Mendonça,cliente16@yahoo.com.br,000.000.016-16,84 5442-2061,F,1988-08-20,2023-11-01 11:27:57,ATIVO
+17,Maria Cecília Sales,cliente17@gmail.com,000.000.017-17,66 9298-7386,F,1995-07-06,2019-09-18 16:39:37,BLOQUEADO
+18,Arthur Gabriel Araújo,cliente18@outlook.com.br,000.000.018-18,87 2466-3903,OUTRO,1951-11-28,2020-09-24 02:50:47,ATIVO
+19,Jade da Cruz,cliente19@gmail.com,000.000.019-19,+55 81 1839-3301,F,1948-02-23,2023-08-07 02:06:31,ATIVO
+20,Thomas da Luz,cliente20@gmail.com,000.000.020-20,62 5488-5587,M,1962-12-08,2023-07-29 01:33:40,ATIVO
+21,João Vitor Fogaça,cliente21@yahoo.com.br,000.000.021-21,55 1514-3697,OUTRO,2006-02-06,2022-11-04 12:19:30,ATIVO
+22,Rafael Santos,cliente22@icloud.com,000.000.022-22,+55 86 5179-8387,M,1990-06-08,2025-11-29 19:06:26,ATIVO
+23,Isaque Farias,cliente23@terra.com.br,000.000.023-23,61 6963-3895,OUTRO,1990-04-17,2021-06-17 16:00:08,BLOQUEADO
+24,Dr. José Azevedo,cliente24@live.com,000.000.024-24,0800 256 0199,M,1993-01-18,2019-01-02 16:29:02,ATIVO
+25,Marina Cardoso,cliente25@bol.com.br,000.000.025-25,68 9476-2936,F,1996-09-02,2021-04-29 02:56:38,INATIVO
+26,Dra. Larissa Carvalho,cliente26@outlook.com.br,000.000.026-26,0300 517 9736,F,1974-04-01,2026-02-21 04:44:29,BLOQUEADO
+27,Dra. Ana Julia Borges,cliente27@gmail.com,000.000.027-27,+55 55 7190-9520,F,1953-09-14,2021-12-27 19:37:08,BLOQUEADO
+28,Dr. Emanuel Brito,cliente28@yahoo.com.br,000.000.028-28,+55 53 5190-4562,M,1998-05-22,2023-12-24 00:37:46,INATIVO
+29,Sra. Maria Vitória Sales,cliente29@yahoo.com.br,000.000.029-29,+55 65 0165-6633,F,1982-08-31,2019-05-22 07:35:14,ATIVO
+30,Maria Andrade,cliente30@icloud.com,000.000.030-30,+55 66 4326-2538,OUTRO,1946-12-12,2023-07-18 08:35:01,INATIVO
