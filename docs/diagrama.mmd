@@ -1,0 +1,66 @@
+erDiagram
+    CLIENTES ||--o{ ENDERECOS : possui
+    CLIENTES ||--o{ PEDIDOS : realiza
+    CLIENTES ||--o{ AVALIACOES : escreve
+    VENDEDORES ||--o{ ENDERECOS : possui
+    VENDEDORES ||--o{ PRODUTOS : anuncia
+    CATEGORIAS ||--o{ CATEGORIAS : subcategoria_de
+    CATEGORIAS ||--o{ PRODUTOS : classifica
+    PRODUTOS ||--o{ ITENS_PEDIDO : compoe
+    PRODUTOS ||--o{ AVALIACOES : recebe
+    PRODUTOS ||--o| RESUMO_VENDAS_PRODUTO : resume
+    ENDERECOS ||--o{ PEDIDOS : entrega_em
+    PEDIDOS ||--o{ ITENS_PEDIDO : contem
+    PEDIDOS ||--|| PAGAMENTOS : possui
+    PEDIDOS ||--o{ AVALIACOES : gera
+
+    CLIENTES {
+        int id_cliente PK
+        varchar nome
+        varchar email UK
+        varchar cpf UK
+    }
+    VENDEDORES {
+        int id_vendedor PK
+        varchar nome_loja
+        varchar cnpj UK
+    }
+    CATEGORIAS {
+        int id_categoria PK
+        int id_categoria_pai FK
+    }
+    PRODUTOS {
+        int id_produto PK
+        int id_vendedor FK
+        int id_categoria FK
+        decimal preco_original
+    }
+    PEDIDOS {
+        int id_pedido PK
+        int id_cliente FK
+        int id_endereco_entrega FK
+        varchar status
+        decimal valor_total
+    }
+    ITENS_PEDIDO {
+        int id_item_pedido PK
+        int id_pedido FK
+        int id_produto FK
+        int quantidade
+    }
+    PAGAMENTOS {
+        int id_pagamento PK
+        int id_pedido FK UK
+        varchar status_pagamento
+    }
+    AVALIACOES {
+        int id_avaliacao PK
+        int id_produto FK
+        int id_cliente FK
+        int id_pedido FK
+    }
+    RESUMO_VENDAS_PRODUTO {
+        int id_produto PK
+        int total_quantidade
+        decimal faturamento_total
+    }

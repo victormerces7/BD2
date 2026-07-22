@@ -1,3 +1,9 @@
+-- =====================================================================
+-- 01_ddl_tabelas.sql
+-- Estrutura do banco (herdada da Avaliação 1) - Marketplace / E-commerce
+-- SGBD: MySQL / MariaDB
+-- =====================================================================
+
 -- 1. Criação das tabelas base (sem dependências)
 CREATE TABLE clientes (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
