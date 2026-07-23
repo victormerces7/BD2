@@ -35,7 +35,7 @@ GROUP BY v.id_vendedor, v.nome_loja
 ORDER BY faturamento_total DESC
 LIMIT 20;
 
---NÃO HOUVE CORREÇÃO
+--criação do trigger resumo_vendas_produto
 -- ---------------------------------------------------------------------
 -- CONSULTA 3 (otimizada): pedidos realizados em um determinado ano
 -- Mudança: a condição YEAR(data_pedido) = 2024 (não-sargável) foi
