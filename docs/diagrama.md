@@ -7,7 +7,6 @@ erDiagram
     CLIENTE ||--o{ PEDIDO : "faz"
     VENDEDOR ||--o{ PRODUTO : "cadastra"
     CATEGORIA ||--o{ PRODUTO : "classifica"
-    CATEGORIA |o--o{ CATEGORIA : "possui subcategorias"
     PRODUTO ||--o{ ITEM_PEDIDO : "consta em"
     PEDIDO ||--|{ ITEM_PEDIDO : "contem"
     PEDIDO ||--|| PAGAMENTO : "possui"
