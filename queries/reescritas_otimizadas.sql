@@ -16,7 +16,7 @@ WHERE status = 'ENTREGUE'
   AND data_pedido BETWEEN '2024-01-01' AND '2024-06-30'
 ORDER BY data_pedido DESC;
 
-
+--correção: CRIAÇÃO DE INDEX IDX_PEDIDOS_STATUS_DATA (status, data_pedido)
 -- ---------------------------------------------------------------------
 -- CONSULTA 2 (otimizada): faturamento total por vendedor
 -- Mudança: as 2 subconsultas correlacionadas (executadas 1x por
@@ -35,7 +35,7 @@ GROUP BY v.id_vendedor, v.nome_loja
 ORDER BY faturamento_total DESC
 LIMIT 20;
 
-
+--NÃO HOUVE CORREÇÃO
 -- ---------------------------------------------------------------------
 -- CONSULTA 3 (otimizada): pedidos realizados em um determinado ano
 -- Mudança: a condição YEAR(data_pedido) = 2024 (não-sargável) foi
@@ -47,7 +47,7 @@ FROM pedidos
 WHERE data_pedido >= '2024-01-01'
   AND data_pedido <  '2025-01-01';
 
-
+-- CORREÇÃO: NÃO HOUVE
 -- ---------------------------------------------------------------------
 -- CONSULTA 4 (otimizada): busca de cliente por nome
 -- Mudança: LIKE '%Silva%' foi substituído por busca FULLTEXT em modo
@@ -62,6 +62,12 @@ WHERE data_pedido >= '2024-01-01'
 -- ---------------------------------------------------------------------
 SELECT id_cliente, nome, email, telefone, status_conta
 FROM clientes
+WHERE nome LIKE '%Silva%';
+
+
+--CORREÇÃO
+SELECT id_cliente, nome, email, telefone, status_conta
+FROM clientes
 WHERE MATCH(nome) AGAINST('Silva*' IN BOOLEAN MODE);
 
 
@@ -73,6 +79,15 @@ WHERE MATCH(nome) AGAINST('Silva*' IN BOOLEAN MODE);
 -- juntar as ~660 mil linhas de itens_pedido com produtos antes de
 -- agregar e ordenar 120 mil produtos.
 -- ---------------------------------------------------------------------
+SELECT p.*, SUM(ip.quantidade) AS total_vendido
+FROM itens_pedido ip
+JOIN produtos p ON p.id_produto = ip.id_produto
+GROUP BY p.id_produto
+ORDER BY total_vendido DESC
+LIMIT 10;
+
+
+--correção
 SELECT p.id_produto, p.nome, p.preco_original, p.preco_desconto, top.total_vendido
 FROM (
     SELECT id_produto, SUM(quantidade) AS total_vendido

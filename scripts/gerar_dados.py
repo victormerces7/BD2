@@ -10,11 +10,11 @@ em máquina local em poucos minutos:
     vendedores      ~     3.000
     clientes        ~    60.000
     enderecos       ~    85.000
-    produtos        ~   20.000
-    pedidos         ~   30.000
-    itens_pedido    ~   75.000
-    pagamentos      ~   30.000
-    avaliacoes      ~   15.000
+    produtos        ~   120.000
+    pedidos         ~   300.000
+    itens_pedido    ~   750.000
+    pagamentos      ~   300.000
+    avaliacoes      ~   150.000
     -----------------------------
     TOTAL           ~ 1.768.000 linhas
 """
@@ -27,7 +27,7 @@ fake = Faker("pt_BR")
 Faker.seed(42)
 random.seed(42)
 
-OUT = "/home/claude/csv"
+OUT = "C:/Users/Victo/Downloads/csv"
 import os
 os.makedirs(OUT, exist_ok=True)
 
