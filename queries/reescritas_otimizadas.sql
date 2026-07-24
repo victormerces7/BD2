@@ -44,10 +44,13 @@ LIMIT 20;
 -- ---------------------------------------------------------------------
 SELECT COUNT(*) AS total_pedidos, SUM(valor_total) AS receita
 FROM pedidos
+WHERE YEAR(data_pedido) = 2024;
+-- CORREÇÃO: consulta pelo total dos pedido em vez de dividir por ano
+SELECT COUNT(*) AS total_pedidos, SUM(valor_total) AS receita
+FROM pedidos
 WHERE data_pedido >= '2024-01-01'
   AND data_pedido <  '2025-01-01';
 
--- CORREÇÃO: NÃO HOUVE
 -- ---------------------------------------------------------------------
 -- CONSULTA 4 (otimizada): busca de cliente por nome
 -- Mudança: LIKE '%Silva%' foi substituído por busca FULLTEXT em modo
